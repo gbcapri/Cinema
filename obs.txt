@@ -1,0 +1,12 @@
+pacotes a serem instalados
+
+//configurar postgres
+npm i pg pg-hstore sequelize
+//instala o ORM object relacional mapping qie substitui o mongoose
+npm install sequelize pg pg-hstore
+//instalar express
+npm i express
+//instalar jsonwebtoken
+npm install bcrypt jsonwebtoken
+//configurar package.json
+npm init -y
