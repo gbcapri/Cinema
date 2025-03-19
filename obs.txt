@@ -8,5 +8,21 @@ npm install sequelize pg pg-hstore
 npm i express
 //instalar jsonwebtoken
 npm install bcrypt jsonwebtoken
-//configurar package.json
+npm install jsonwebtoken
+//configurar package.json / Inicialize o Projeto Node.js
 npm init -y
+//instalar para carregar as variaveis de env
+npm install dotenv
+//instalar as dependências que faltam
+npm install concurrently --save-dev
+//se der alguma vulnerabilidade no passo anterior
+//usa 2 vezes
+npm audit fix
+//se o passo anterior não funcionar atualize as dependências com
+npm install semver@latest --save-dev
+npm install simple-update-notifier@latest --save-dev
+npm install nodemon@latest --save-dev
+
+//no frontend
+npm install axios
+
