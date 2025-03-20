@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Bem-vindo ao Cinema</h1>
-    <router-view />  <!-- Exibe o conteúdo da rota -->
+    <router-view /> 
   </div>
 </template>
 

@@ -10,7 +10,7 @@ const authenticator = (req, res, next) => {
   try {
     const decoded = verifyToken(token); // Verifica e decodifica o token
     req.user = decoded; // Armazena os dados do usuário no objeto `req`
-    next(); // Chama o próximo middleware ou rota
+    next(); // Chama o próximo middleware
   } catch (err) {
     return res.status(401).json({ message: 'Token inválido ou expirado' });
   }

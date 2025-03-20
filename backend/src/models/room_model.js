@@ -1,5 +1,5 @@
-import { DataTypes } from 'sequelize'; // Usando import ao invés de require
-import sequelize from '../config/db.js';  // Usando import para sequelize
+import { DataTypes } from 'sequelize'; 
+import sequelize from '../config/db.js';
 
 const Room = sequelize.define('Room', {
   number: {
@@ -12,10 +12,10 @@ const Room = sequelize.define('Room', {
   },
   type: {
     type: DataTypes.STRING,
-    allowNull: false, // Ex: "IMAX", "3D", "normal"
+    allowNull: false, 
   },
 }, {
-  timestamps: true, // Testar se precisa
+  timestamps: true,
 });
 
 export default Room;

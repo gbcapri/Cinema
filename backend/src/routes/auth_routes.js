@@ -24,7 +24,6 @@ router.post('/login', (req, res) => {
     const userId = 1;  // Exemplo de ID de usuário
     const role = 'admin';  // Exemplo de role de usuário
 
-    // Gere o token
     const token = generateToken(userId, role);
     return res.json({ token });
   }

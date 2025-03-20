@@ -18,7 +18,6 @@
       };
     },
     mounted() {
-      // Aqui você fará a requisição ao backend para pegar a lista de filmes
       axios.get('http://localhost:3000/movies')
         .then(response => {
           this.movies = response.data;

@@ -26,7 +26,7 @@ router.post('/', authenticator, authorizer(['admin']), async (req, res) => {
 // Todos os filmes (todos os usuários)
 router.get('/', async (req, res) => {
   try {
-    const movies = await Movie.findAll(); // Método correto do Sequelize para listar todos os registros
+    const movies = await Movie.findAll();
     res.json(movies);
   } catch (error) {
     res.status(500).json({ error: 'Erro ao buscar filmes' });
@@ -36,7 +36,7 @@ router.get('/', async (req, res) => {
 // Filme específico (todos os usuários)
 router.get('/:id', async (req, res) => {
   try {
-    const movie = await Movie.findByPk(req.params.id); // Método correto do Sequelize para buscar por chave primária (ID)
+    const movie = await Movie.findByPk(req.params.id);
     if (!movie) {
       return res.status(404).json({ error: 'Filme não encontrado' });
     }
@@ -53,7 +53,7 @@ router.put('/:id', authenticator, authorizer(['admin']), async (req, res) => {
     if (!movie) {
       return res.status(404).json({ error: 'Filme não encontrado' });
     }
-    await movie.update(req.body); // Atualiza o filme com os dados enviados no corpo da requisição
+    await movie.update(req.body);
     res.json(movie);
   } catch (error) {
     res.status(500).json({ error: 'Erro ao atualizar o filme' });
@@ -67,7 +67,7 @@ router.delete('/:id', authenticator, authorizer(['admin']), async (req, res) => 
     if (!movie) {
       return res.status(404).json({ error: 'Filme não encontrado' });
     }
-    await movie.destroy(); // Deleta o filme
+    await movie.destroy();
     res.sendStatus(204);
   } catch (error) {
     res.status(500).json({ error: 'Erro ao deletar o filme' });

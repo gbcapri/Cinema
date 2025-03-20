@@ -12,7 +12,7 @@ const Ticket = sequelize.define('Ticket', {
     allowNull: false,
   },
   payment_method: {
-    type: DataTypes.STRING, // "credit_card", "debit_card", "cash"
+    type: DataTypes.STRING,
   },
 }, {
   timestamps: true,

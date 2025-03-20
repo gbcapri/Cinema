@@ -1,5 +1,5 @@
 import { Sequelize, DataTypes } from 'sequelize';
-import sequelize from '../config/db.js'; // Importa a conexão com o banco de dados
+import sequelize from '../config/db.js';
 
 const User = sequelize.define('User', {
   username: {
@@ -14,7 +14,7 @@ const User = sequelize.define('User', {
   role: {
     type: DataTypes.STRING,
     allowNull: false,
-    defaultValue: 'user', // Usuário normal definido como user
+    defaultValue: 'user',
   },
 });
 

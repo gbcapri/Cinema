@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from 'components/Home.vue';  // Exemplo de componente
-import Movies from 'components/Movies.vue';  // Exemplo de outro componente
+import Home from 'components/Home.vue'; 
+import Movies from 'components/Movies.vue';  
 
 const routes = [
   { path: '/', component: Home },

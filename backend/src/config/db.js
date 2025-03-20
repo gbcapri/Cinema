@@ -1,14 +1,14 @@
-import dotenv from 'dotenv';  // Para carregar as variáveis de ambiente
+import dotenv from 'dotenv'; 
 
-dotenv.config();  // Carregar as variáveis do arquivo .env
+dotenv.config();
 
 const dbUrl = `postgres://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;
 
-console.log(dbUrl); // Verifique se a URL está sendo lida corretamente
+console.log(dbUrl); 
 
-import { Sequelize } from 'sequelize';  // Importando o Sequelize
+import { Sequelize } from 'sequelize';
 
-// Configurando a conexão com o banco de dados PostgreSQL
+// Configurando a conexão com o PostgreSQL
 const sequelize = new Sequelize(dbUrl, {
   dialect: 'postgres',
   logging: false,  // Desabilita o log das queries
